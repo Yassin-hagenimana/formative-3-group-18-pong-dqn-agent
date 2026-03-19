@@ -5,6 +5,7 @@ It includes hyperparameter tuning with 10 different configurations.
 """
 
 import os
+import re
 import gymnasium as gym
 import numpy as np
 import pandas as pd
@@ -200,11 +201,66 @@ def train_dqn_agent(
     }
 
 
-def run_hyperparameter_experiments():
+def run_hyperparameter_experiments(member_names=None):
     """
     Run 10 different hyperparameter combinations (required by rubric).
     Each group member must experiment with 10 different configurations.
     """
+
+    def summarize_noted_behavior(log_file_path):
+        """Build a short observed-behavior summary from training logs."""
+        if not os.path.exists(log_file_path):
+            return "No log data found"
+
+        reward_pattern = re.compile(r"Mean Reward \(last 100\):\s*(-?\d+(?:\.\d+)?)")
+        length_pattern = re.compile(r"Mean Episode Length \(last 100\):\s*(-?\d+(?:\.\d+)?)")
+        rewards = []
+        lengths = []
+
+        with open(log_file_path, 'r') as f:
+            for line in f:
+                reward_match = reward_pattern.search(line)
+                if reward_match:
+                    rewards.append(float(reward_match.group(1)))
+                length_match = length_pattern.search(line)
+                if length_match:
+                    lengths.append(float(length_match.group(1)))
+
+        if not rewards:
+            return "Insufficient reward samples"
+
+        window = min(3, len(rewards))
+        start_reward = float(np.mean(rewards[:window]))
+        end_reward = float(np.mean(rewards[-window:]))
+        reward_delta = end_reward - start_reward
+
+        if reward_delta > 1.0:
+            reward_trend = "Reward improved"
+        elif reward_delta < -1.0:
+            reward_trend = "Reward declined"
+        else:
+            reward_trend = "Reward mostly stable"
+
+        stability = float(np.std(rewards)) if len(rewards) > 1 else 0.0
+        stability_note = "stable" if stability < 3.0 else "high variance"
+
+        if lengths:
+            start_length = float(np.mean(lengths[:window]))
+            end_length = float(np.mean(lengths[-window:]))
+            length_delta = end_length - start_length
+            if length_delta > 1.0:
+                length_note = "episode length increased"
+            elif length_delta < -1.0:
+                length_note = "episode length decreased"
+            else:
+                length_note = "episode length steady"
+        else:
+            length_note = "episode length unavailable"
+
+        return (
+            f"{reward_trend} ({start_reward:.2f}->{end_reward:.2f}), "
+            f"{stability_note}, {length_note}"
+        )
     
     # Create output folders for experiment artifacts.
     os.makedirs('models', exist_ok=True)
@@ -305,12 +361,20 @@ def run_hyperparameter_experiments():
         }
     ]
     
+    if member_names is None:
+        member_names = ["Yassin"]
+    member_names = [name.strip() for name in member_names if name and name.strip()]
+    if not member_names:
+        member_names = ["Yassin"]
+
     # Store results for documentation
     results = []
     
     # Run each experiment
-    for config in hyperparameter_configs:
+    for idx, config in enumerate(hyperparameter_configs):
         print(f"\n\nRunning {config['name']}...")
+        assigned_member = member_names[idx % len(member_names)]
+        experiment_log_path = f"logs/{config['name']}_training.txt"
         
         model, env, metrics = train_dqn_agent(
             env_name='ALE/Pong-v5',
@@ -323,12 +387,15 @@ def run_hyperparameter_experiments():
             epsilon_end=config['epsilon_end'],
             epsilon_decay=config['epsilon_decay'],
             model_save_path=f"models/{config['name']}_dqn_model.zip",
-            log_file=f"logs/{config['name']}_training.txt",
+            log_file=experiment_log_path,
             experiment_name=config['name']
         )
+
+        noted_behavior = summarize_noted_behavior(experiment_log_path)
         
         # Save results
         results.append({
+            'Member Name': assigned_member,
             'Experiment': config['name'],
             'Learning Rate': config['learning_rate'],
             'Gamma': config['gamma'],
@@ -336,6 +403,7 @@ def run_hyperparameter_experiments():
             'Epsilon Start': config['epsilon_start'],
             'Epsilon End': config['epsilon_end'],
             'Epsilon Decay': config['epsilon_decay'],
+            'Noted Behavior': noted_behavior,
             'Model Path': f"models/{config['name']}_dqn_model.zip"
         })
         
@@ -343,12 +411,21 @@ def run_hyperparameter_experiments():
     
     # Create and save results table
     df_results = pd.DataFrame(results)
+
+    csv_path = 'hyperparameter_experiments.csv'
+    md_path = 'HYPERPARAMETER_TUNING_TABLE.md'
+
+    # Keep updating aggregate results across runs.
+    if os.path.exists(csv_path):
+        existing_df = pd.read_csv(csv_path)
+        df_results = pd.concat([existing_df, df_results], ignore_index=True)
+        df_results = df_results.drop_duplicates(subset=['Member Name', 'Experiment'], keep='last')
     
     # Save as CSV
-    df_results.to_csv('hyperparameter_experiments.csv', index=False)
+    df_results.to_csv(csv_path, index=False)
     
     # Save as formatted table for documentation
-    with open('HYPERPARAMETER_TUNING_TABLE.md', 'w') as f:
+    with open(md_path, 'w') as f:
         f.write("# Hyperparameter Tuning Experiments - Task 1\n\n")
         f.write("## Summary Table\n\n")
         try:
@@ -360,12 +437,14 @@ def run_hyperparameter_experiments():
         f.write("## Detailed Results\n\n")
         for idx, row in df_results.iterrows():
             f.write(f"### Experiment {idx + 1}: {row['Experiment']}\n")
+            f.write(f"- **Member Name**: {row['Member Name']}\n")
             f.write(f"- **Learning Rate (lr)**: {row['Learning Rate']}\n")
             f.write(f"- **Gamma (γ)**: {row['Gamma']}\n")
             f.write(f"- **Batch Size**: {row['Batch Size']}\n")
             f.write(f"- **Epsilon Start**: {row['Epsilon Start']}\n")
             f.write(f"- **Epsilon End**: {row['Epsilon End']}\n")
             f.write(f"- **Epsilon Decay**: {row['Epsilon Decay']}\n")
+            f.write(f"- **Noted Behavior**: {row['Noted Behavior']}\n")
             f.write(f"- **Model Path**: {row['Model Path']}\n\n")
     
     print("\n" + "="*70)
@@ -424,6 +503,8 @@ if __name__ == '__main__':
                        help='Total timesteps for training')
     parser.add_argument('--env', type=str, default='ALE/Pong-v5',
                        help='Atari environment name')
+    parser.add_argument('--members', type=str, default='Yassin',
+                       help='Comma-separated member names, e.g. Yassin,Alice,Bob')
     
     args = parser.parse_args()
     
@@ -438,7 +519,8 @@ if __name__ == '__main__':
     else:
         # Run all 10 hyperparameter experiments
         print("Training mode: HYPERPARAMETER EXPERIMENTS (10 Configurations)")
-        results_df = run_hyperparameter_experiments()
+        member_names = [name.strip() for name in args.members.split(',') if name.strip()]
+        results_df = run_hyperparameter_experiments(member_names=member_names)
         print("\n" + results_df.to_string())
     
     print("\nTraining completed successfully!")

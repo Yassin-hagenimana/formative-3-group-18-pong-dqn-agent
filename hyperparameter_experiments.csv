@@ -1,11 +1,11 @@
-Experiment,Learning Rate,Gamma,Batch Size,Epsilon Start,Epsilon End,Epsilon Decay,Model Path
-Exp1_HighLR_LowGamma,0.001,0.95,32,1.0,0.05,0.995,models/Exp1_HighLR_LowGamma_dqn_model.zip
-Exp2_LowLR_HighGamma,5e-05,0.99,32,1.0,0.05,0.995,models/Exp2_LowLR_HighGamma_dqn_model.zip
-Exp3_LargeBatch_HighEpsilon,0.0001,0.99,64,1.0,0.1,0.99,models/Exp3_LargeBatch_HighEpsilon_dqn_model.zip
-Exp4_SmallBatch_LowEpsilon,0.0001,0.99,16,0.5,0.02,0.98,models/Exp4_SmallBatch_LowEpsilon_dqn_model.zip
-Exp5_MediumLR_MediumGamma,0.0003,0.97,32,1.0,0.05,0.995,models/Exp5_MediumLR_MediumGamma_dqn_model.zip
-Exp6_HighLR_HighGamma_LargeBatch,0.0005,0.995,64,1.0,0.01,0.99,models/Exp6_HighLR_HighGamma_LargeBatch_dqn_model.zip
-Exp7_LowLR_LowGamma_SmallBatch,1e-05,0.9,16,1.0,0.05,0.99,models/Exp7_LowLR_LowGamma_SmallBatch_dqn_model.zip
-Exp8_BalancedConfig,0.0002,0.99,32,1.0,0.05,0.995,models/Exp8_BalancedConfig_dqn_model.zip
-Exp9_AggressiveExploration,0.0001,0.99,32,1.0,0.1,0.985,models/Exp9_AggressiveExploration_dqn_model.zip
-Exp10_ConservativeConfig,0.0001,0.99,32,0.9,0.02,0.998,models/Exp10_ConservativeConfig_dqn_model.zip
+Member Name,Experiment,Learning Rate,Gamma,Batch Size,Epsilon Start,Epsilon End,Epsilon Decay,Noted Behavior,Model Path
+Yassin,Exp1_HighLR_LowGamma,0.001,0.95,32,1.0,0.05,0.995,"Reward mostly stable (-20.26->-20.64), stable, episode length decreased",models/Exp1_HighLR_LowGamma_dqn_model.zip
+Yassin,Exp2_LowLR_HighGamma,5e-05,0.99,32,1.0,0.05,0.995,"Reward mostly stable (-20.32->-20.70), stable, episode length decreased",models/Exp2_LowLR_HighGamma_dqn_model.zip
+Yassin,Exp3_LargeBatch_HighEpsilon,0.0001,0.99,64,1.0,0.1,0.99,"Reward mostly stable (-20.69->-20.72), stable, episode length increased",models/Exp3_LargeBatch_HighEpsilon_dqn_model.zip
+Yassin,Exp4_SmallBatch_LowEpsilon,0.0001,0.99,16,0.5,0.02,0.98,"Reward mostly stable (-20.52->-20.68), stable, episode length decreased",models/Exp4_SmallBatch_LowEpsilon_dqn_model.zip
+Yassin,Exp5_MediumLR_MediumGamma,0.0003,0.97,32,1.0,0.05,0.995,"Reward mostly stable (-20.67->-20.69), stable, episode length increased",models/Exp5_MediumLR_MediumGamma_dqn_model.zip
+Yassin,Exp6_HighLR_HighGamma_LargeBatch,0.0005,0.995,64,1.0,0.01,0.99,"Reward mostly stable (-20.57->-20.61), stable, episode length increased",models/Exp6_HighLR_HighGamma_LargeBatch_dqn_model.zip
+Yassin,Exp7_LowLR_LowGamma_SmallBatch,1e-05,0.9,16,1.0,0.05,0.99,"Reward mostly stable (-20.28->-20.63), stable, episode length decreased",models/Exp7_LowLR_LowGamma_SmallBatch_dqn_model.zip
+Yassin,Exp8_BalancedConfig,0.0002,0.99,32,1.0,0.05,0.995,"Reward mostly stable (-20.40->-20.74), stable, episode length decreased",models/Exp8_BalancedConfig_dqn_model.zip
+Yassin,Exp9_AggressiveExploration,0.0001,0.99,32,1.0,0.1,0.985,"Reward mostly stable (-20.88->-20.63), stable, episode length increased",models/Exp9_AggressiveExploration_dqn_model.zip
+Yassin,Exp10_ConservativeConfig,0.0001,0.99,32,0.9,0.02,0.998,"Reward mostly stable (-20.77->-20.64), stable, episode length increased",models/Exp10_ConservativeConfig_dqn_model.zip
