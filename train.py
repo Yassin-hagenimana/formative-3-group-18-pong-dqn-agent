@@ -212,6 +212,7 @@ def run_hyperparameter_experiments():
 
     # Define 10 different hyperparameter configurations
     hyperparameter_configs = [
+        # Yassin hyperparameter configurations
         {
             'name': 'Exp1_HighLR_LowGamma',
             'learning_rate': 1e-3,
@@ -314,7 +315,7 @@ def run_hyperparameter_experiments():
         model, env, metrics = train_dqn_agent(
             env_name='ALE/Pong-v5',
             policy_type='CnnPolicy',
-            total_timesteps=100000,  # Reduced for faster training
+            total_timesteps=50000,  # Reduced for faster training
             learning_rate=config['learning_rate'],
             gamma=config['gamma'],
             batch_size=config['batch_size'],
