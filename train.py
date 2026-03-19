@@ -373,7 +373,7 @@ def run_hyperparameter_experiments(member_names=None):
     # Run each experiment
     for idx, config in enumerate(hyperparameter_configs):
         print(f"\n\nRunning {config['name']}...")
-        assigned_member = member_names[idx % len(member_names)]
+        assigned_member = member_names[(idx // 10) % len(member_names)]
         experiment_log_path = f"logs/{config['name']}_training.txt"
         
         model, env, metrics = train_dqn_agent(
