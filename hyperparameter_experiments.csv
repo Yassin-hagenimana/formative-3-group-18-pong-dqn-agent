@@ -9,3 +9,13 @@ Yassin,Exp7_LowLR_LowGamma_SmallBatch,1e-05,0.9,16,1.0,0.05,0.99,"Reward mostly 
 Yassin,Exp8_BalancedConfig,0.0002,0.99,32,1.0,0.05,0.995,"Reward mostly stable (-20.40->-20.74), stable, episode length decreased",models/Exp8_BalancedConfig_dqn_model.zip
 Yassin,Exp9_AggressiveExploration,0.0001,0.99,32,1.0,0.1,0.985,"Reward mostly stable (-20.88->-20.63), stable, episode length increased",models/Exp9_AggressiveExploration_dqn_model.zip
 Yassin,Exp10_ConservativeConfig,0.0001,0.99,32,0.9,0.02,0.998,"Reward mostly stable (-20.77->-20.64), stable, episode length increased",models/Exp10_ConservativeConfig_dqn_model.zip
+Alliance,Exp1_VeryHighLR_FastDecay,0.005,0.99,32,1.0,0.05,0.97,"Reward stable (-20.75 → -20.62), episode length stable",models/Exp1_VeryHighLR_FastDecay_dqn_model.zip
+Alliance,Exp2_VeryLowGamma_LargeBatch,0.0002,0.8,64,1.0,0.05,0.995,"Reward stable (-21.00 → -20.66), episode length stable",models/Exp2_VeryLowGamma_LargeBatch_dqn_model.zip
+Alliance,Exp3_XLBatch_StdLR,0.0001,0.99,128,1.0,0.05,0.995,"Reward stable (-20.50 → -20.62), episode length decreased",models/Exp3_XLBatch_StdLR_dqn_model.zip
+Alliance,Exp4_MiniBatch_VeryFastDecay,0.0001,0.99,8,1.0,0.05,0.96,"Reward stable (-21.00 → -20.67), episode length increased",models/Exp4_MiniBatch_VeryFastDecay_dqn_model.zip
+Alliance,Exp5_MaxGamma_VeryLowLR,1e-05,0.999,32,1.0,0.05,0.995,"Reward stable (-20.50 → -20.78), episode length stable",models/Exp5_MaxGamma_VeryLowLR_dqn_model.zip
+Alliance,Exp6_ZeroWarmup_ImmediateExploit,0.0002,0.99,32,0.2,0.05,0.99,"Reward stable (-21.00 → -20.63), episode length stable",models/Exp6_ZeroWarmup_ImmediateExploit_dqn_model.zip
+Alliance,Exp7_HighLR_XLBatch_LowGamma,0.001,0.92,128,1.0,0.05,0.99,"Reward declining (-20.00 → -20.62), episode length decreased",models/Exp7_HighLR_XLBatch_LowGamma_dqn_model.zip
+Alliance,Exp8_LowEnd_VeryHighEps,0.0001,0.99,32,1.0,0.2,0.995,"Reward stable (-20.75 → -20.71), episode length decreased",models/Exp8_LowEnd_VeryHighEps_dqn_model.zip
+Alliance,Exp9_HighLR_MidGamma_SlowDecay,0.0008,0.96,32,1.0,0.05,0.999,"Reward stable (-20.75 → -20.72), episode length decreased",models/Exp9_HighLR_MidGamma_SlowDecay_dqn_model.zip
+Alliance,Exp10_SmallBatch_HighGamma_LowEpsEnd,0.0003,0.995,16,0.8,0.005,0.99,"Reward stable (-20.75 → -20.55), episode length increased",models/Exp10_SmallBatch_HighGamma_LowEpsEnd_dqn_model.zip
