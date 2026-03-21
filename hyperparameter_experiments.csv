@@ -9,6 +9,7 @@ Yassin,Exp7_LowLR_LowGamma_SmallBatch,1e-05,0.9,16,1.0,0.05,0.99,"Reward mostly 
 Yassin,Exp8_BalancedConfig,0.0002,0.99,32,1.0,0.05,0.995,"Reward mostly stable (-20.40->-20.74), stable, episode length decreased",models/Exp8_BalancedConfig_dqn_model.zip
 Yassin,Exp9_AggressiveExploration,0.0001,0.99,32,1.0,0.1,0.985,"Reward mostly stable (-20.88->-20.63), stable, episode length increased",models/Exp9_AggressiveExploration_dqn_model.zip
 Yassin,Exp10_ConservativeConfig,0.0001,0.99,32,0.9,0.02,0.998,"Reward mostly stable (-20.77->-20.64), stable, episode length increased",models/Exp10_ConservativeConfig_dqn_model.zip
+<<<<<<< HEAD
 Alliance,Exp1_VeryHighLR_FastDecay,0.005,0.99,32,1.0,0.05,0.97,"Reward stable (-20.75 → -20.62), episode length stable",models/Exp1_VeryHighLR_FastDecay_dqn_model.zip
 Alliance,Exp2_VeryLowGamma_LargeBatch,0.0002,0.8,64,1.0,0.05,0.995,"Reward stable (-21.00 → -20.66), episode length stable",models/Exp2_VeryLowGamma_LargeBatch_dqn_model.zip
 Alliance,Exp3_XLBatch_StdLR,0.0001,0.99,128,1.0,0.05,0.995,"Reward stable (-20.50 → -20.62), episode length decreased",models/Exp3_XLBatch_StdLR_dqn_model.zip
@@ -19,3 +20,15 @@ Alliance,Exp7_HighLR_XLBatch_LowGamma,0.001,0.92,128,1.0,0.05,0.99,"Reward decli
 Alliance,Exp8_LowEnd_VeryHighEps,0.0001,0.99,32,1.0,0.2,0.995,"Reward stable (-20.75 → -20.71), episode length decreased",models/Exp8_LowEnd_VeryHighEps_dqn_model.zip
 Alliance,Exp9_HighLR_MidGamma_SlowDecay,0.0008,0.96,32,1.0,0.05,0.999,"Reward stable (-20.75 → -20.72), episode length decreased",models/Exp9_HighLR_MidGamma_SlowDecay_dqn_model.zip
 Alliance,Exp10_SmallBatch_HighGamma_LowEpsEnd,0.0003,0.995,16,0.8,0.005,0.99,"Reward stable (-20.75 → -20.55), episode length increased",models/Exp10_SmallBatch_HighGamma_LowEpsEnd_dqn_model.zip
+=======
+Stecie,Stecie_Exp1_LowLR_LowGamma,1e-05,0.9,32,1.0,0.05,0.995,"Reward mostly stable (-20.59->-20.72), stable, episode length steady",models/Stecie_Exp1_LowLR_LowGamma_dqn_model.zip
+Stecie,Stecie_Exp2_HighLR_VeryHighGamma,0.0005,0.999,32,1.0,0.05,0.995,"Reward mostly stable (-20.93->-20.73), stable, episode length increased",models/Stecie_Exp2_HighLR_VeryHighGamma_dqn_model.zip
+Stecie,Stecie_Exp3_UltraLargeBatch,0.0002,0.99,256,1.0,0.05,0.995,"Reward mostly stable (-20.51->-20.80), stable, episode length steady",models/Stecie_Exp3_UltraLargeBatch_dqn_model.zip
+Stecie,Stecie_Exp4_UltraSmallBatch,0.0002,0.99,4,1.0,0.05,0.995,"Reward mostly stable (-20.38->-20.76), stable, episode length steady",models/Stecie_Exp4_UltraSmallBatch_dqn_model.zip
+Stecie,Stecie_Exp5_NoDecay_Epsilon,0.0002,0.99,32,1.0,0.5,1.0,"Reward mostly stable (-20.52->-20.53), stable, episode length increased",models/Stecie_Exp5_NoDecay_Epsilon_dqn_model.zip
+Stecie,Stecie_Exp6_FastDecay_Short,0.0002,0.99,32,1.0,0.01,0.95,"Reward mostly stable (-20.56->-20.67), stable, episode length increased",models/Stecie_Exp6_FastDecay_Short_dqn_model.zip
+Stecie,Stecie_Exp7_HighLR_LowGamma_SmallBatch,0.0008,0.92,8,1.0,0.05,0.995,"Reward mostly stable (-20.92->-20.65), stable, episode length increased",models/Stecie_Exp7_HighLR_LowGamma_SmallBatch_dqn_model.zip
+Stecie,Stecie_Exp8_LowLR_HighGamma_LargeBatch,1e-05,0.995,128,1.0,0.05,0.995,"Reward mostly stable (-20.75->-20.58), stable, episode length increased",models/Stecie_Exp8_LowLR_HighGamma_LargeBatch_dqn_model.zip
+Stecie,Stecie_Exp9_ExtremeExploration,0.0002,0.99,32,1.0,0.2,0.98,"Reward mostly stable (-20.86->-20.65), stable, episode length decreased",models/Stecie_Exp9_ExtremeExploration_dqn_model.zip
+Stecie,Stecie_Exp10_MidRange_All,0.0003,0.97,64,0.8,0.03,0.99,"Reward mostly stable (-20.92->-20.71), stable, episode length increased",models/Stecie_Exp10_MidRange_All_dqn_model.zip
+>>>>>>> 2c1df165558f38d345569de869413c8e10eeb953

@@ -1,0 +1,64 @@
+Training Log - Stecie_Exp2_HighLR_VeryHighGamma
+Started at: 2026-03-21 01:31:40.723533
+Environment: ALE/Pong-v5
+Policy: CnnPolicy
+Learning Rate: 0.0005
+Gamma: 0.999
+Batch Size: 32
+Epsilon: start=1.0, end=0.05, decay=0.995
+Replay Buffer Size: 100000
+----------------------------------------------------------------------
+
+Timestep: 1000, Mean Reward (last 100): -21.00, Mean Episode Length (last 100): 197.75
+Timestep: 2000, Mean Reward (last 100): -21.00, Mean Episode Length (last 100): 206.11
+Timestep: 3000, Mean Reward (last 100): -20.79, Mean Episode Length (last 100): 212.50
+Timestep: 4000, Mean Reward (last 100): -20.79, Mean Episode Length (last 100): 209.74
+Timestep: 5000, Mean Reward (last 100): -20.70, Mean Episode Length (last 100): 210.09
+Timestep: 6000, Mean Reward (last 100): -20.71, Mean Episode Length (last 100): 210.07
+Timestep: 7000, Mean Reward (last 100): -20.70, Mean Episode Length (last 100): 210.18
+Timestep: 8000, Mean Reward (last 100): -20.68, Mean Episode Length (last 100): 212.24
+Timestep: 9000, Mean Reward (last 100): -20.63, Mean Episode Length (last 100): 214.61
+Timestep: 10000, Mean Reward (last 100): -20.65, Mean Episode Length (last 100): 215.26
+Timestep: 11000, Mean Reward (last 100): -20.69, Mean Episode Length (last 100): 214.73
+Timestep: 12000, Mean Reward (last 100): -20.67, Mean Episode Length (last 100): 214.84
+Timestep: 13000, Mean Reward (last 100): -20.68, Mean Episode Length (last 100): 214.85
+Timestep: 14000, Mean Reward (last 100): -20.69, Mean Episode Length (last 100): 214.14
+Timestep: 15000, Mean Reward (last 100): -20.65, Mean Episode Length (last 100): 215.64
+Timestep: 16000, Mean Reward (last 100): -20.68, Mean Episode Length (last 100): 214.07
+Timestep: 17000, Mean Reward (last 100): -20.67, Mean Episode Length (last 100): 214.47
+Timestep: 18000, Mean Reward (last 100): -20.65, Mean Episode Length (last 100): 215.83
+Timestep: 19000, Mean Reward (last 100): -20.61, Mean Episode Length (last 100): 215.77
+Timestep: 20000, Mean Reward (last 100): -20.62, Mean Episode Length (last 100): 216.14
+Timestep: 21000, Mean Reward (last 100): -20.64, Mean Episode Length (last 100): 216.19
+Timestep: 22000, Mean Reward (last 100): -20.65, Mean Episode Length (last 100): 216.83
+Timestep: 23000, Mean Reward (last 100): -20.64, Mean Episode Length (last 100): 216.83
+Timestep: 24000, Mean Reward (last 100): -20.62, Mean Episode Length (last 100): 217.21
+Timestep: 25000, Mean Reward (last 100): -20.64, Mean Episode Length (last 100): 217.05
+Timestep: 26000, Mean Reward (last 100): -20.64, Mean Episode Length (last 100): 217.27
+Timestep: 27000, Mean Reward (last 100): -20.62, Mean Episode Length (last 100): 218.63
+Timestep: 28000, Mean Reward (last 100): -20.61, Mean Episode Length (last 100): 219.08
+Timestep: 29000, Mean Reward (last 100): -20.62, Mean Episode Length (last 100): 218.82
+Timestep: 30000, Mean Reward (last 100): -20.62, Mean Episode Length (last 100): 218.41
+Timestep: 31000, Mean Reward (last 100): -20.66, Mean Episode Length (last 100): 216.62
+Timestep: 32000, Mean Reward (last 100): -20.66, Mean Episode Length (last 100): 216.76
+Timestep: 33000, Mean Reward (last 100): -20.66, Mean Episode Length (last 100): 216.97
+Timestep: 34000, Mean Reward (last 100): -20.65, Mean Episode Length (last 100): 216.58
+Timestep: 35000, Mean Reward (last 100): -20.67, Mean Episode Length (last 100): 215.97
+Timestep: 36000, Mean Reward (last 100): -20.69, Mean Episode Length (last 100): 215.06
+Timestep: 37000, Mean Reward (last 100): -20.67, Mean Episode Length (last 100): 215.70
+Timestep: 38000, Mean Reward (last 100): -20.66, Mean Episode Length (last 100): 216.23
+Timestep: 39000, Mean Reward (last 100): -20.68, Mean Episode Length (last 100): 214.92
+Timestep: 40000, Mean Reward (last 100): -20.70, Mean Episode Length (last 100): 214.85
+Timestep: 41000, Mean Reward (last 100): -20.72, Mean Episode Length (last 100): 214.99
+Timestep: 42000, Mean Reward (last 100): -20.71, Mean Episode Length (last 100): 214.75
+Timestep: 43000, Mean Reward (last 100): -20.68, Mean Episode Length (last 100): 214.53
+Timestep: 44000, Mean Reward (last 100): -20.67, Mean Episode Length (last 100): 214.52
+Timestep: 45000, Mean Reward (last 100): -20.66, Mean Episode Length (last 100): 214.35
+Timestep: 46000, Mean Reward (last 100): -20.67, Mean Episode Length (last 100): 214.06
+Timestep: 47000, Mean Reward (last 100): -20.68, Mean Episode Length (last 100): 214.49
+Timestep: 48000, Mean Reward (last 100): -20.72, Mean Episode Length (last 100): 213.18
+Timestep: 49000, Mean Reward (last 100): -20.73, Mean Episode Length (last 100): 212.89
+Timestep: 50000, Mean Reward (last 100): -20.74, Mean Episode Length (last 100): 212.70
+
+Training completed at: 2026-03-21 01:33:31.579706
+Model saved to: models/Stecie_Exp2_HighLR_VeryHighGamma_dqn_model.zip

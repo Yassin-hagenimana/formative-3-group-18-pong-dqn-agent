@@ -808,3 +808,7 @@ Timestep: 796000, Mean Reward (last 100): -16.02, Mean Episode Length (last 100)
 Timestep: 797000, Mean Reward (last 100): -16.00, Mean Episode Length (last 100): 486.46
 Timestep: 798000, Mean Reward (last 100): -15.94, Mean Episode Length (last 100): 487.98
 Timestep: 799000, Mean Reward (last 100): -15.91, Mean Episode Length (last 100): 489.38
+Timestep: 800000, Mean Reward (last 100): -15.93, Mean Episode Length (last 100): 488.53
+Timestep: 801000, Mean Reward (last 100): -15.93, Mean Episode Length (last 100): 489.50
+Timestep: 802000, Mean Reward (last 100): -15.91, Mean Episode Length (last 100): 489.91
+Timestep: 803000, Mean Reward (last 100): -15.82, Mean Episode Length (last 100): 491.80

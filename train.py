@@ -266,100 +266,98 @@ def run_hyperparameter_experiments(member_names=None):
     os.makedirs('models', exist_ok=True)
     os.makedirs('logs', exist_ok=True)
 
-    # Define 10 different hyperparameter configurations
     hyperparameter_configs = [
-        # Yassin hyperparameter configurations
-        {
-            'name': 'Exp1_HighLR_LowGamma',
-            'learning_rate': 1e-3,
-            'gamma': 0.95,
-            'batch_size': 32,
-            'epsilon_start': 1.0,
-            'epsilon_end': 0.05,
-            'epsilon_decay': 0.995
-        },
-        {
-            'name': 'Exp2_LowLR_HighGamma',
-            'learning_rate': 5e-5,
-            'gamma': 0.99,
-            'batch_size': 32,
-            'epsilon_start': 1.0,
-            'epsilon_end': 0.05,
-            'epsilon_decay': 0.995
-        },
-        {
-            'name': 'Exp3_LargeBatch_HighEpsilon',
-            'learning_rate': 1e-4,
-            'gamma': 0.99,
-            'batch_size': 64,
-            'epsilon_start': 1.0,
-            'epsilon_end': 0.1,
-            'epsilon_decay': 0.99
-        },
-        {
-            'name': 'Exp4_SmallBatch_LowEpsilon',
-            'learning_rate': 1e-4,
-            'gamma': 0.99,
-            'batch_size': 16,
-            'epsilon_start': 0.5,
-            'epsilon_end': 0.02,
-            'epsilon_decay': 0.98
-        },
-        {
-            'name': 'Exp5_MediumLR_MediumGamma',
-            'learning_rate': 3e-4,
-            'gamma': 0.97,
-            'batch_size': 32,
-            'epsilon_start': 1.0,
-            'epsilon_end': 0.05,
-            'epsilon_decay': 0.995
-        },
-        {
-            'name': 'Exp6_HighLR_HighGamma_LargeBatch',
-            'learning_rate': 5e-4,
-            'gamma': 0.995,
-            'batch_size': 64,
-            'epsilon_start': 1.0,
-            'epsilon_end': 0.01,
-            'epsilon_decay': 0.99
-        },
-        {
-            'name': 'Exp7_LowLR_LowGamma_SmallBatch',
-            'learning_rate': 1e-5,
-            'gamma': 0.9,
-            'batch_size': 16,
-            'epsilon_start': 1.0,
-            'epsilon_end': 0.05,
-            'epsilon_decay': 0.99
-        },
-        {
-            'name': 'Exp8_BalancedConfig',
-            'learning_rate': 2e-4,
-            'gamma': 0.99,
-            'batch_size': 32,
-            'epsilon_start': 1.0,
-            'epsilon_end': 0.05,
-            'epsilon_decay': 0.995
-        },
-        {
-            'name': 'Exp9_AggressiveExploration',
-            'learning_rate': 1e-4,
-            'gamma': 0.99,
-            'batch_size': 32,
-            'epsilon_start': 1.0,
-            'epsilon_end': 0.1,
-            'epsilon_decay': 0.985
-        },
-        {
-            'name': 'Exp10_ConservativeConfig',
-            'learning_rate': 1e-4,
-            'gamma': 0.99,
-            'batch_size': 32,
-            'epsilon_start': 0.9,
-            'epsilon_end': 0.02,
-            'epsilon_decay': 0.998
-        }
-    ]
+    {
+        'name': 'Stecie_Exp1_LowLR_LowGamma',
+        'learning_rate': 1e-5,
+        'gamma': 0.90,
+        'batch_size': 32,
+        'epsilon_start': 1.0,
+        'epsilon_end': 0.05,
+        'epsilon_decay': 0.995
+    },
+    {
+        'name': 'Stecie_Exp2_HighLR_VeryHighGamma',
+        'learning_rate': 5e-4,
+        'gamma': 0.999,
+        'batch_size': 32,
+        'epsilon_start': 1.0,
+        'epsilon_end': 0.05,
+        'epsilon_decay': 0.995
+    },
+    {
+        'name': 'Stecie_Exp3_UltraLargeBatch',
+        'learning_rate': 2e-4,
+        'gamma': 0.99,
+        'batch_size': 256,
+        'epsilon_start': 1.0,
+        'epsilon_end': 0.05,
+        'epsilon_decay': 0.995
+    },
+    {
+        'name': 'Stecie_Exp4_UltraSmallBatch',
+        'learning_rate': 2e-4,
+        'gamma': 0.99,
+        'batch_size': 4,
+        'epsilon_start': 1.0,
+        'epsilon_end': 0.05,
+        'epsilon_decay': 0.995
+    },
+    {
+        'name': 'Stecie_Exp5_NoDecay_Epsilon',
+        'learning_rate': 2e-4,
+        'gamma': 0.99,
+        'batch_size': 32,
+        'epsilon_start': 1.0,
+        'epsilon_end': 0.5,
+        'epsilon_decay': 1.0
+    },
+    {
+        'name': 'Stecie_Exp6_FastDecay_Short',
+        'learning_rate': 2e-4,
+        'gamma': 0.99,
+        'batch_size': 32,
+        'epsilon_start': 1.0,
+        'epsilon_end': 0.01,
+        'epsilon_decay': 0.95
+    },
+    {
+        'name': 'Stecie_Exp7_HighLR_LowGamma_SmallBatch',
+        'learning_rate': 8e-4,
+        'gamma': 0.92,
+        'batch_size': 8,
+        'epsilon_start': 1.0,
+        'epsilon_end': 0.05,
+        'epsilon_decay': 0.995
+    },
+    {
+        'name': 'Stecie_Exp8_LowLR_HighGamma_LargeBatch',
+        'learning_rate': 1e-5,
+        'gamma': 0.995,
+        'batch_size': 128,
+        'epsilon_start': 1.0,
+        'epsilon_end': 0.05,
+        'epsilon_decay': 0.995
+    },
+    {
+        'name': 'Stecie_Exp9_ExtremeExploration',
+        'learning_rate': 2e-4,
+        'gamma': 0.99,
+        'batch_size': 32,
+        'epsilon_start': 1.0,
+        'epsilon_end': 0.2,
+        'epsilon_decay': 0.98
+    },
+    {
+        'name': 'Stecie_Exp10_MidRange_All',
+        'learning_rate': 3e-4,
+        'gamma': 0.97,
+        'batch_size': 64,
+        'epsilon_start': 0.8,
+        'epsilon_end': 0.03,
+        'epsilon_decay': 0.99
+    }
+]
     
     if member_names is None:
         member_names = ["Yassin"]
@@ -422,10 +420,10 @@ def run_hyperparameter_experiments(member_names=None):
         df_results = df_results.drop_duplicates(subset=['Member Name', 'Experiment'], keep='last')
     
     # Save as CSV
-    df_results.to_csv(csv_path, index=False)
+    df_results.to_csv(csv_path, index=False, encoding='utf-8')
     
     # Save as formatted table for documentation
-    with open(md_path, 'w') as f:
+    with open(md_path, 'w', encoding='utf-8') as f:
         f.write("# Hyperparameter Tuning Experiments - Task 1\n\n")
         f.write("## Summary Table\n\n")
         try:
