@@ -1,0 +1,70 @@
+Training Log - 1M_Exp4_HighLR
+Started at: 2026-03-22 00:22:16.053884
+Environment: ALE/Pong-v5
+Policy: CnnPolicy
+Learning Rate: 0.001
+Gamma: 0.99
+Batch Size: 32
+Epsilon: start=1.0, end=0.05, decay=0.995
+Replay Buffer Size: 100000
+----------------------------------------------------------------------
+
+Timestep: 1000, Mean Reward (last 100): -20.80, Mean Episode Length (last 100): 199.00
+Timestep: 2000, Mean Reward (last 100): -20.78, Mean Episode Length (last 100): 203.78
+Timestep: 3000, Mean Reward (last 100): -20.79, Mean Episode Length (last 100): 211.07
+Timestep: 4000, Mean Reward (last 100): -20.61, Mean Episode Length (last 100): 215.22
+Timestep: 5000, Mean Reward (last 100): -20.70, Mean Episode Length (last 100): 214.96
+Timestep: 6000, Mean Reward (last 100): -20.70, Mean Episode Length (last 100): 215.44
+Timestep: 7000, Mean Reward (last 100): -20.66, Mean Episode Length (last 100): 215.38
+Timestep: 8000, Mean Reward (last 100): -20.70, Mean Episode Length (last 100): 214.00
+Timestep: 9000, Mean Reward (last 100): -20.67, Mean Episode Length (last 100): 213.90
+Timestep: 10000, Mean Reward (last 100): -20.65, Mean Episode Length (last 100): 213.33
+Timestep: 11000, Mean Reward (last 100): -20.63, Mean Episode Length (last 100): 214.18
+Timestep: 12000, Mean Reward (last 100): -20.56, Mean Episode Length (last 100): 217.38
+Timestep: 13000, Mean Reward (last 100): -20.58, Mean Episode Length (last 100): 218.49
+Timestep: 14000, Mean Reward (last 100): -20.59, Mean Episode Length (last 100): 218.12
+Timestep: 15000, Mean Reward (last 100): -20.62, Mean Episode Length (last 100): 218.01
+Timestep: 16000, Mean Reward (last 100): -20.63, Mean Episode Length (last 100): 217.26
+Timestep: 17000, Mean Reward (last 100): -20.64, Mean Episode Length (last 100): 216.51
+Timestep: 18000, Mean Reward (last 100): -20.65, Mean Episode Length (last 100): 216.31
+Timestep: 19000, Mean Reward (last 100): -20.64, Mean Episode Length (last 100): 216.23
+Timestep: 20000, Mean Reward (last 100): -20.64, Mean Episode Length (last 100): 216.15
+Timestep: 21000, Mean Reward (last 100): -20.64, Mean Episode Length (last 100): 215.75
+Timestep: 22000, Mean Reward (last 100): -20.64, Mean Episode Length (last 100): 215.57
+Timestep: 23000, Mean Reward (last 100): -20.62, Mean Episode Length (last 100): 216.57
+Timestep: 24000, Mean Reward (last 100): -20.64, Mean Episode Length (last 100): 215.86
+Timestep: 25000, Mean Reward (last 100): -20.61, Mean Episode Length (last 100): 215.81
+Timestep: 26000, Mean Reward (last 100): -20.62, Mean Episode Length (last 100): 215.72
+Timestep: 27000, Mean Reward (last 100): -20.62, Mean Episode Length (last 100): 215.14
+Timestep: 28000, Mean Reward (last 100): -20.64, Mean Episode Length (last 100): 215.67
+Timestep: 29000, Mean Reward (last 100): -20.65, Mean Episode Length (last 100): 215.20
+Timestep: 30000, Mean Reward (last 100): -20.67, Mean Episode Length (last 100): 215.38
+Timestep: 31000, Mean Reward (last 100): -20.67, Mean Episode Length (last 100): 216.57
+Timestep: 32000, Mean Reward (last 100): -20.70, Mean Episode Length (last 100): 216.26
+Timestep: 33000, Mean Reward (last 100): -20.73, Mean Episode Length (last 100): 214.34
+Timestep: 34000, Mean Reward (last 100): -20.76, Mean Episode Length (last 100): 213.05
+Timestep: 35000, Mean Reward (last 100): -20.76, Mean Episode Length (last 100): 212.31
+Timestep: 36000, Mean Reward (last 100): -20.76, Mean Episode Length (last 100): 212.31
+Timestep: 37000, Mean Reward (last 100): -20.75, Mean Episode Length (last 100): 212.07
+Timestep: 38000, Mean Reward (last 100): -20.71, Mean Episode Length (last 100): 212.92
+Timestep: 39000, Mean Reward (last 100): -20.70, Mean Episode Length (last 100): 212.86
+Timestep: 40000, Mean Reward (last 100): -20.71, Mean Episode Length (last 100): 212.79
+Timestep: 41000, Mean Reward (last 100): -20.73, Mean Episode Length (last 100): 211.96
+Timestep: 42000, Mean Reward (last 100): -20.74, Mean Episode Length (last 100): 211.95
+Timestep: 43000, Mean Reward (last 100): -20.73, Mean Episode Length (last 100): 211.55
+Timestep: 44000, Mean Reward (last 100): -20.75, Mean Episode Length (last 100): 210.85
+Timestep: 45000, Mean Reward (last 100): -20.74, Mean Episode Length (last 100): 210.43
+Timestep: 46000, Mean Reward (last 100): -20.78, Mean Episode Length (last 100): 209.72
+Timestep: 47000, Mean Reward (last 100): -20.79, Mean Episode Length (last 100): 209.11
+Timestep: 48000, Mean Reward (last 100): -20.77, Mean Episode Length (last 100): 209.40
+Timestep: 49000, Mean Reward (last 100): -20.78, Mean Episode Length (last 100): 208.94
+Timestep: 50000, Mean Reward (last 100): -20.75, Mean Episode Length (last 100): 209.77
+Timestep: 51000, Mean Reward (last 100): -20.75, Mean Episode Length (last 100): 209.66
+Timestep: 52000, Mean Reward (last 100): -20.75, Mean Episode Length (last 100): 208.89
+Timestep: 53000, Mean Reward (last 100): -20.75, Mean Episode Length (last 100): 209.39
+Timestep: 54000, Mean Reward (last 100): -20.76, Mean Episode Length (last 100): 209.46
+Timestep: 55000, Mean Reward (last 100): -20.75, Mean Episode Length (last 100): 209.22
+Timestep: 56000, Mean Reward (last 100): -20.73, Mean Episode Length (last 100): 210.33
+Timestep: 57000, Mean Reward (last 100): -20.72, Mean Episode Length (last 100): 210.91
+Timestep: 58000, Mean Reward (last 100): -20.69, Mean Episode Length (last 100): 212.06
+Timestep: 59000, Mean Reward (last 100): -20.72, Mean Episode Length (last 100): 211.64
