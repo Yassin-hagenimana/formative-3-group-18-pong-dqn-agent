@@ -502,7 +502,7 @@ if __name__ == '__main__':
     parser.add_argument('--env', type=str, default='ALE/Pong-v5',
                        help='Atari environment name')
     parser.add_argument('--members', type=str, default='Yassin',
-                       help='Comma-separated member names, e.g. Yassin,Alice,Bob')
+                       help='Comma-separated member names, e.g. Yassin,Alice,Stecie')
     
     args = parser.parse_args()
     
