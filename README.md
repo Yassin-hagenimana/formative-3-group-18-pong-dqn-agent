@@ -167,6 +167,8 @@ python play.py --model models/1M_Exp3_XLBatch_dqn_model.zip
 python play.py --no-render
 ```
 
+https://youtu.be/IAuxIun2eqk
+
 ---
 
 ## Output Structure
