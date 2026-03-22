@@ -20,7 +20,7 @@ This is a group project implementing a reinforcement learning agent using Deep Q
 
 ## Agent Gameplay Demo
 
- **Video**; <video src="https://github.com/user-attachments/assets/89015926-eb45-422a-85c3-6c09536d9b82" controls width="800"></video>
+ **Video**; <video src="hhttps://github.com/user-attachments/assets/5707258c-03e6-4ef0-bf0e-5b200d583191" controls width="800"></video>
 
 > To run the agent yourself: `python play.py`
 
